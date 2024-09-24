@@ -1,0 +1,25 @@
+import { ComponentType, ReactNode } from 'react';
+import { V1VirtualMachine } from '@kubevirt-ui/kubevirt-api/kubevirt';
+import { K8sResourceCommon } from '@openshift-console/dynamic-plugin-sdk';
+import { ButtonVariant, ModalVariant } from '@patternfly/react-core';
+import './TabModal.scss';
+export declare type TabModalProps<T extends K8sResourceCommon = K8sResourceCommon> = {
+    children: ReactNode;
+    closeOnSubmit?: boolean;
+    headerText: string;
+    isDisabled?: boolean;
+    isLoading?: boolean;
+    isOpen: boolean;
+    modalError?: any;
+    modalVariant?: ModalVariant;
+    obj?: T;
+    onClose: () => Promise<void> | void;
+    onSubmit: (obj: T) => Promise<string | T | T[] | V1VirtualMachine | void>;
+    positionTop?: boolean;
+    submitBtnText?: string;
+    submitBtnVariant?: ButtonVariant;
+    titleIconVariant?: 'custom' | 'danger' | 'info' | 'success' | 'warning' | ComponentType<any>;
+};
+export declare type TabModalFC = <T extends K8sResourceCommon = K8sResourceCommon>(props: TabModalProps<T>) => JSX.Element;
+declare const TabModal: TabModalFC;
+export default TabModal;

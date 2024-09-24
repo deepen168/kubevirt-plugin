@@ -125,6 +125,9 @@
     "@types/react-dom": "^17.0.0"
   },
   "scripts": {
+    "build:components": "rm -rf lib/ && prettier --write src/ && npm run build:esm && pm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonS --outDir lib/cjs",
     "build": "yarn clean && NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 yarn ts-node node_modules/.bin/webpack",
     "check-types": "tsc",
     "clean": "rm -rf dist",

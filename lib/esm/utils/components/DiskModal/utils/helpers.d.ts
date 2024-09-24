@@ -1,0 +1,17 @@
+import { WritableDraft } from 'immer/dist/internal';
+import { V1beta1DataVolume } from '@kubevirt-ui/kubevirt-api/containerized-data-importer/models';
+import { V1DataVolumeTemplateSpec, V1Disk, V1VirtualMachine, V1VirtualMachineInstance, V1Volume } from '@kubevirt-ui/kubevirt-api/kubevirt';
+import { InterfaceTypes, SourceTypes, V1DiskFormState } from './types';
+export declare const getEmptyVMDataVolumeResource: (vm: V1VirtualMachine, createOwnerReference?: boolean) => V1beta1DataVolume;
+export declare const getRemoveHotplugPromise: (vm: V1VirtualMachine, diskName: string) => any;
+export declare const checkDifferentStorageClassFromBootPVC: (vm: V1VirtualMachine, selectedStorageClass: string) => boolean;
+export declare const getRunningVMMissingDisksFromVMI: (vmDisks: V1Disk[], vmi: V1VirtualMachineInstance) => V1Disk[];
+export declare const getRunningVMMissingVolumesFromVMI: (vmVolumes: V1Volume[], vmi: V1VirtualMachineInstance) => V1Volume[];
+export declare const hotplugPromise: (vmObj: V1VirtualMachine, diskState: V1DiskFormState) => any;
+export declare const produceVMDisks: (vm: V1VirtualMachine, updateDisks: (vmDraft: WritableDraft<V1VirtualMachine>) => void) => V1VirtualMachine;
+export declare const getDefaultDiskType: (isVMRunning: boolean) => InterfaceTypes;
+export declare const doesSourceRequireDataVolume: (diskSource: SourceTypes) => boolean;
+export declare const getSourceFromVolume: (volume: V1Volume, dataVolumeTemplate: V1DataVolumeTemplateSpec) => SourceTypes;
+export declare const diskModalTitle: (isEditDisk: boolean, isVMRunning: boolean) => any;
+export declare const getOS: (vm: V1VirtualMachine) => any;
+export declare const doesDataVolumeTemplateHaveDisk: (vm: V1VirtualMachine, diskName: string) => boolean;

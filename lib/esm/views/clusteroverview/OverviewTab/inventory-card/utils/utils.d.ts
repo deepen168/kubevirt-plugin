@@ -1,0 +1,24 @@
+import * as React from 'react';
+export declare const getOSImagesNS: () => string;
+export declare const getTemplates: (resources: any) => import("./types").VirtualMachineTemplateBundle[];
+export declare const getVMStatusCounts: (vms: any) => {};
+export declare const iconMap: {
+    CrashLoopBackOff: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+    DataVolumeError: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+    Deleting: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    ErrImagePull: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+    ErrorDataVolumeNotFound: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+    ErrorPvcNotFound: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+    ErrorUnschedulable: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+    ImagePullBackOff: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+    Migrating: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Paused: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Provisioning: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Running: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Starting: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Stopped: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Stopping: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Terminating: React.ComponentClass<import("@patternfly/react-icons/dist/esm/createIcon").SVGIconProps, any>;
+    Unknown: React.FC<import("@openshift-console/dynamic-plugin-sdk").ColoredIconProps>;
+};
+export declare const getVMStatusIcon: (status: string) => React.ComponentClass | React.FC;

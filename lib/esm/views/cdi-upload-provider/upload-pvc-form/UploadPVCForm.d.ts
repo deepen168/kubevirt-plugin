@@ -1,0 +1,22 @@
+import { Dispatch, FC, SetStateAction } from 'react';
+import { V1Template } from '@kubevirt-ui/kubevirt-api/console';
+import { IoK8sApiStorageV1StorageClass } from '@kubevirt-ui/kubevirt-api/kubernetes';
+import { V1beta1PersistentVolumeClaim } from '@kubevirt-ui/kubevirt-api/kubevirt';
+import './upload-pvc-form.scss';
+declare type UploadPVCFormProps = {
+    commonTemplates: V1Template[];
+    fileName: string;
+    fileValue: File | string;
+    goldenPvcs: V1beta1PersistentVolumeClaim[];
+    handleFileChange: (_: any, value: File) => void;
+    handleFileNameChange: (event: any, file: string) => void;
+    isLoading: boolean;
+    ns: string;
+    onChange: (K8sResourceKind: any) => void;
+    osParam?: string;
+    setDisableFormSubmit: Dispatch<SetStateAction<boolean>>;
+    setIsFileRejected: Dispatch<SetStateAction<boolean>>;
+    storageClasses: IoK8sApiStorageV1StorageClass[];
+};
+declare const UploadPVCForm: FC<UploadPVCFormProps>;
+export default UploadPVCForm;

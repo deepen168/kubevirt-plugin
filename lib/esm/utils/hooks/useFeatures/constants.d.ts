@@ -1,0 +1,16 @@
+import { IoK8sApiCoreV1ConfigMap, IoK8sApiRbacV1Role, IoK8sApiRbacV1RoleBinding } from '@kubevirt-ui/kubevirt-api/kubernetes';
+export declare const AUTOMATIC_SUBSCRIPTION_ACTIVATION_KEY = "automaticSubscriptionActivationKey";
+export declare const AUTOMATIC_SUBSCRIPTION_ORGANIZATION_ID = "automaticSubscriptionOrganizationId";
+export declare const AUTOMATIC_SUBSCRIPTION_CUSTOM_URL = "automaticSubscriptionCustomUrl";
+export declare const AUTOMATIC_SUBSCRIPTION_TYPE_KEY = "automaticSubscriptionType";
+export declare const INSTANCE_TYPE_ENABLED = "instanceTypesEnabled";
+export declare const KUBEVIRT_APISERVER_PROXY = "kubevirtApiserverProxy";
+export declare const LOAD_BALANCER_ENABLED = "loadBalancerEnabled";
+export declare const NODE_PORT_ADDRESS = "nodePortAddress";
+export declare const NODE_PORT_ENABLED = "nodePortEnabled";
+export declare const DISABLED_GUEST_SYSTEM_LOGS_ACCESS = "disabledGuestSystemLogsAccess";
+export declare const FEATURES_CONFIG_MAP_NAME = "kubevirt-ui-features";
+export declare const FEATURE_HCO_PERSISTENT_RESERVATION = "persistentReservationHCO";
+export declare const featuresConfigMapInitialState: IoK8sApiCoreV1ConfigMap;
+export declare const featuresRole: IoK8sApiRbacV1Role;
+export declare const featuresRoleBinding: IoK8sApiRbacV1RoleBinding;

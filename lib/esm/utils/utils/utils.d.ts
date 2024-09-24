@@ -1,0 +1,28 @@
+import { IoK8sApiCoreV1Service } from '@kubevirt-ui/kubevirt-api/kubernetes';
+import { FilterValue } from '@openshift-console/dynamic-plugin-sdk';
+import { ItemsToFilterProps } from './types';
+export declare const kubevirtConsole: Console;
+export declare const clusterBasePath: string;
+export declare const getValidNamespace: (activeNamespace: string) => any;
+export declare const isEmpty: (obj: any) => boolean;
+export declare const get: (obj: unknown, path: string | string[], defaultValue?: undefined) => string | undefined;
+export declare const isUpstream: boolean;
+export declare const isString: (val: unknown) => boolean;
+export declare const getSSHNodePort: (sshService: IoK8sApiCoreV1Service) => number | undefined;
+export declare const isTemplateParameter: (value: string) => boolean;
+export declare const getRandomChars: (len?: number) => string;
+export declare const SSH_PUBLIC_KEY_VALIDATION_REGEX: RegExp;
+export declare const validateSSHPublicKey: (value: string) => boolean;
+export declare const getContentScrollableElement: () => HTMLElement;
+export declare const findAllIndexes: <T>(array: T[], predicate: (element: T, index: number, array: T[]) => boolean) => number[];
+export declare const getItemNameWithOther: (itemName: string, items: ItemsToFilterProps[]) => string;
+export declare const includeFilter: (compareData: FilterValue, items: ItemsToFilterProps[], itemName: string) => boolean;
+export declare const ensurePath: <T extends object>(data: T, paths: string | string[]) => void;
+export declare const columnSorting: <T>(data: T[], direction: string, pagination: {
+    [key: string]: any;
+}, path: string) => T[];
+export declare const removeDuplicatesByName: (array: any[], nameProperty?: string) => any;
+export declare const generatePrettyName: (prefix?: string) => string;
+export declare const appendDockerPrefix: (image: string) => string;
+export declare const removeDockerPrefix: (image: string) => string;
+export declare const isAllNamespaces: (namespace: string) => boolean;

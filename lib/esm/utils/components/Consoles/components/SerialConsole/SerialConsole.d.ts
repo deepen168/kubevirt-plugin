@@ -1,0 +1,22 @@
+import React from 'react';
+import '@patternfly/react-styles/css/components/Consoles/xterm.css';
+import '@patternfly/react-styles/css/components/Consoles/SerialConsole.css';
+import './SerialConsole.scss';
+declare const _default: React.ForwardRefExoticComponent<import("./Xterm/utils/Xterm").XTermProps & {
+    cols?: number | undefined;
+    fontFamily?: string | undefined;
+    fontSize?: number | undefined;
+    innerRef?: React.RefObject<any> | undefined;
+    onConnect: () => void;
+    onData: (e: string) => void;
+    onDisconnect: () => void;
+    onTitleChanged?: (() => void) | undefined;
+    rows?: number | undefined;
+    status?: string | undefined;
+    textConnect?: string | undefined;
+    textDisconnect?: string | undefined;
+    textDisconnected?: string | undefined;
+    textLoading?: string | undefined;
+    textReset?: string | undefined;
+} & React.RefAttributes<HTMLDivElement>>;
+export default _default;

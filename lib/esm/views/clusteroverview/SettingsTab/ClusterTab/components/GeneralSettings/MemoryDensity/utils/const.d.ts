@@ -1,0 +1,2 @@
+export declare const MEMORY_OVERCOMMIT_STARTING_VALUE = 100;
+export declare const MEMORY_OVERCOMMIT_END_VALUE = 150;

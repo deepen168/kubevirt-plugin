@@ -1,0 +1,11 @@
+import { Step } from 'react-joyride';
+import { V1VirtualMachine } from '@kubevirt-ui/kubevirt-api/kubevirt';
+export declare const runningTourSignal: import("@preact/signals-core").Signal<boolean>;
+export declare const stepIndexSignal: import("@preact/signals-core").Signal<number>;
+export declare const nextStep: () => void;
+export declare const prevStep: () => void;
+export declare const startTour: () => void;
+export declare const stopTour: () => void;
+export declare const resetTour: () => void;
+export declare const tourSteps: Step[];
+export declare const tourGuideVM: V1VirtualMachine;

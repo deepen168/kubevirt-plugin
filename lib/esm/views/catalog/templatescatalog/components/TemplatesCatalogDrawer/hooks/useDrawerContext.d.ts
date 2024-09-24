@@ -1,0 +1,34 @@
+import React, { FC } from 'react';
+import { Updater } from 'use-immer';
+import { V1Template } from '@kubevirt-ui/kubevirt-api/console';
+import { V1VirtualMachine } from '@kubevirt-ui/kubevirt-api/kubevirt';
+import { SSHSecretDetails } from '@kubevirt-utils/components/SSHSecretModal/utils/types';
+import { DataUpload, UploadDataProps } from '@kubevirt-utils/hooks/useCDIUpload/useCDIUpload';
+export declare type DrawerContext = {
+    bootSourceLoaded: boolean;
+    cdFile: File | string;
+    cdUpload: DataUpload;
+    diskFile: File | string;
+    diskUpload: DataUpload;
+    isBootSourceAvailable: boolean;
+    setCDFile: (file: File | string) => void;
+    setDiskFile: (file: File | string) => void;
+    setSSHDetails: (details: SSHSecretDetails) => void;
+    setStorageClassName: (scName: string) => void;
+    setTemplate: Updater<V1Template>;
+    setVM?: (vm: V1VirtualMachine) => void;
+    sshDetails: SSHSecretDetails;
+    storageClassName: string;
+    storageClassRequired: boolean;
+    template: V1Template;
+    templateDataLoaded: boolean;
+    templateLoadingError: Error;
+    uploadCDData?: ({ dataVolume, file }: UploadDataProps) => Promise<void>;
+    uploadDiskData?: ({ dataVolume, file }: UploadDataProps) => Promise<void>;
+    vm: V1VirtualMachine;
+};
+export declare const DrawerContext: React.Context<DrawerContext>;
+export declare const DrawerContextProvider: FC<{
+    template: V1Template;
+}>;
+export declare const useDrawerContext: () => DrawerContext;

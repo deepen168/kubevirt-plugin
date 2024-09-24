@@ -1,0 +1,3 @@
+import { EnhancedSelectOptionProps } from '@kubevirt-utils/components/FilterSelect/utils/types';
+import { K8sGroupVersionKind, K8sResourceCommon } from '@openshift-console/dynamic-plugin-sdk';
+export declare const getResourceDropdownOptions: (resources: K8sResourceCommon[], groupVersionKind: K8sGroupVersionKind, onClick: () => void, group?: string) => EnhancedSelectOptionProps[];

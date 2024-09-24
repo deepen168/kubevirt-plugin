@@ -1,0 +1,1 @@
+{"version":3,"file":"userSettingsInitialState.js","sourceRoot":"","sources":["../../../../../../src/utils/hooks/useKubevirtUserSettings/utils/userSettingsInitialState.ts"],"names":[],"mappings":"AAAA,IAAM,wBAAwB,GAAsB;IAClD,KAAK,EAAE,EAAE;IACT,OAAO,EAAE,EAAE;IACX,uBAAuB,EAAE,EAAE;IAC3B,UAAU,EAAE,EAAE;IACd,GAAG,EAAE,EAAE;CACR,CAAC;AA0BF,eAAe,wBAAwB,CAAC"}

@@ -1,0 +1,11 @@
+import { FieldError, FieldErrorsImpl } from 'react-hook-form';
+import { V1beta1DataVolumeSourceRef, V1Disk } from '@kubevirt-ui/kubevirt-api/kubevirt';
+import { V1DiskFormState } from '../../utils/types';
+export declare const getSourceRef: (diskState: V1DiskFormState) => V1beta1DataVolumeSourceRef;
+export declare const getPVCClaimName: (diskState: V1DiskFormState) => string;
+export declare const getLunReservation: (disk: V1Disk) => boolean;
+export declare const getDiskSharable: (disk: V1Disk) => boolean;
+export declare const getErrorPVCName: (errors: FieldErrorsImpl<V1DiskFormState>) => FieldError;
+export declare const getErrorSnapshotName: (errors: FieldErrorsImpl<V1DiskFormState>) => FieldError;
+export declare const getErrorSnapshotNamespace: (errors: FieldErrorsImpl<V1DiskFormState>) => FieldError;
+export declare const getDataVolumeTemplateSize: (diskState: V1DiskFormState) => string;

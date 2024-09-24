@@ -1,0 +1,11 @@
+import { V1VirtualMachine } from '@kubevirt-ui/kubevirt-api/kubevirt';
+import { K8sGroupVersionKind, K8sResourceCommon } from '@openshift-console/dynamic-plugin-sdk';
+import { InstanceTypeVMState } from '../state/utils/types';
+export declare const createPopulatedCloudInitYAML: (selectedPreference: string, osLabel: string, subscriptionData: RHELAutomaticSubscriptionData, autoUpdateEnabled?: boolean) => any;
+export declare const generateVM: (instanceTypeState: InstanceTypeVMState, targetNamespace: string, startVM: boolean, subscriptionData: RHELAutomaticSubscriptionData, autoUpdateEnabled?: boolean) => V1VirtualMachine;
+export declare const addISOFlowToVM: (vm: V1VirtualMachine, storageClassName: string) => V1VirtualMachine;
+export declare const addSizeToROOTDISKVM: (vm: V1VirtualMachine, storage: string, isIso: boolean) => V1VirtualMachine;
+export declare const addSysprepOrCloudInitToVM: (vm: V1VirtualMachine, sysprepName: string) => V1VirtualMachine;
+export declare const addPVCAsSourceDiskToVM: (vm: V1VirtualMachine, selectedBootableVolume: BootableVolume) => V1VirtualMachine;
+export declare const groupVersionKindFromCommonResource: (resource: K8sResourceCommon) => K8sGroupVersionKind;
+export declare const useIsWindowsBootableVolume: () => boolean;
